@@ -9,10 +9,7 @@
     <title>Document</title>
 </head>
 <body>
-    <div>
-  
-
-    </div2>
+    
  
 <br><br><hr><br>
 
@@ -20,42 +17,35 @@
    <div class="row">
      <div class="col-4 offset-4 mt-5">
        <form action="#">
-        <h2>LLena el formulario de Alta</h2>
+        <h2>Informacion del anuncio</h2>
          <div class="form-group">
         <!---<label for="lblId" class="ocultar">Id:</label>
          <input type="text" id="lblId" name="id" class="ocultar form-control" /></div>-->
         <label for="lblTitulo">Titulo:</label>
-        <input type="text" id="idTitulo" name="titulo" placeholder="Ingrese Titulo" class="form-control" autocomplete="off" />
-         <br><br>
-         <div class="form-group">
-         <label for="lblTransaccion">Transaccion:</label><br>
+        <input type="text" id="idTitulo" name="titulo" placeholder="Ingrese Titulo" class="form-control" autocomplete="off" /></div>
+        <label for="lblTransaccion">Transaccion:</label><br>
          <label for="lblVenta">Venta:</label>
-         <input type="radio" id="idVenta" name="transaccion" value ="venta" checked /></div><br>
+         <input type="radio" id="idVenta" name="transaccion" value ="venta" checked />
          <label for="lblAlquiler">Alquiler:</label>
-         <input type="radio" id="idAlquiler" name="transaccion"  value="alquiler"/></div><br>
+         <input type="radio" id="idAlquiler" name="transaccion"  value="alquiler"/><br>
          <div class="form-group">
          <label for="lblDescripcion">Descripcion:</label>
          <input type="text" id="idDescripcion" name="descripcion" placeholder="Ingrese Descripcion" class="form-control"  /></div><br />
          <div class="form-group">
          <label for="lblPrecio">Precio:</label>
          <input type="text" id="idPrecio" name="precio" placeholder="Ingrese Precio" class="form-control"  /></div><br/>
-         <div class="form-group">
-         <label for="lblBaños">Cantidad de Ba&ntilde;os:</label>
-         <input type="text" id="idBanios" name="baños" placeholder="Ingrese baños" class="form-control"  /></div><br/>
-         <div class="form-group">
-         <label for="lblAutos">Cantidadid Autos:</label>
-         <input type="textAuto" id="idAutos" name="autos" placeholder="Ingrese Autos" class="form-control"  /></div><br/>
-         <div class="form-group">
-         <label for="lblDormitorios">Cantidad de Dormitorios:</label>
-         <input type="text" id="idDormitorios" name="dormitorios" placeholder="Ingrese Cantidad" class="form-control"  /></div><br />
+        <input type="num" id="idpuertas" name="puertas" placeholder="Puertas" class="form-control"  />
+        <input type="num" id="idKm" name="km" placeholder="KMs" class="form-control"  />
+         <input type="num" id="idPotencia" name="potencia" placeholder="Potencia" class="form-control"  />
          <br><br>
-         <button type="submit" id='btnGuardar' class="btn btn-primary">Guardar</button>
-         <div id='divInfo'></div>
+         <i class="far fa-save"></i>
+         <button   class="btn"  id='btnGuardar' ><i class="far fa-save"></i>Guardar</button>
+        <div id="divInfo"></div>
        </form>
        
        <br><br>
        <div>
-       <button  class="row" id="btnBaja">Eliminar</button>
+       <button  class="btn" id="btnBaja">Eliminar</button>
        <br><hr></br>
        <div class="tabla">
         <table>
@@ -66,9 +56,9 @@
                     <th>Transaccion</th>
                     <th>Descripcion</th>
                     <th> Precio</th>
-                    <th> Cantidad de Baños</th>
-                    <th> Cantidad de Autos</th>
-                    <th> Cantidad de Dormitorios</th>
+                    <th> num_puertas</th>
+                    <th>  num-KMs</th>
+                    <th> Potencia</th>
                 </tr>
 
             </thead>

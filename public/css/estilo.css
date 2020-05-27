@@ -8,7 +8,7 @@ form {
     border-radius: 1em;*/
     margin: 0 auto;
     border-radius: 0px;
-    background-color: royalblue;
+    background-color:rgb(196, 194, 194);
     padding: 50px;
     width:400px;
     
@@ -18,13 +18,27 @@ form {
     padding: 12px 12px 12px 0;
     display: inline-block;
   }
+  th
+  {
+    background-color: brown;
+  }
 
 table{
     border-collapse: collapse;
 }
 table, td, th {
-    border: 2px solid rgb(0, 255, 42);
+    border: 2px solid black;
     padding:20px;
+}
+
+input[type="radio"] {
+  display:inline-block;
+  width:19px;
+  height:19px;
+  margin:-1px 4px 0 0;
+  vertical-align:middle;
+  
+  cursor:pointer;
 }
 /*button{
     color:white;
@@ -34,6 +48,16 @@ table, td, th {
     height:25px;
     font-size:15px;
 }*/
+input[type="num"] {
+  display:inline-block;
+  width:19px;
+  height:px;
+  padding: 14px 20px;
+  margin:5px 5px;
+  vertical-align:middle;
+  width:100px;
+  cursor:pointer;
+}
 input {
     width : 150px;
     margin: 0;
@@ -45,15 +69,12 @@ input {
   margin-top: 6px;
   }
 
-  button {
-    width: 30%;
-    background-color: #4CAF50;
-    color: white;
-    padding: 14px 20px;
-    margin: 8px 0;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    width:400px;
 
+  .btn {
+    background-color: rgb(14, 196, 54);
+    border: none;
+    color: white;
+    padding: 12px 16px;
+    font-size: 16px;
+    cursor: pointer;
   }

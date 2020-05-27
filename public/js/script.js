@@ -5,14 +5,16 @@ window.onload = function() {
 
 let btnGuardar = document.getElementById('btnGuardar');
 let info = document.getElementById('divInfo');
-
+let btnBaja= document.getElementById('btnBaja')
 
 let img = document.createElement('img');
 img.setAttribute('src','img/810.gif');
 img.setAttribute('alt','spinner');
 
 let formulario = document.forms[0];
+
 btnGuardar.addEventListener('click',formulario);
+btnBaja.addEventListener('click',Eliminar);
 
 formulario.onsubmit=(e)=>{
     e.preventDefault();//cancelar el compaortamiento por defecto
@@ -20,7 +22,7 @@ formulario.onsubmit=(e)=>{
 let transaccion;
 let titulo = document.querySelector('#idTitulo').value;
 
-(document.querySelector('#idVenta').cheked) 
+(document.querySelector('#idVenta').checked) 
 ? transaccion = document.querySelector('#idVenta').value 
 : transaccion = document.querySelector('#idAlquiler').value;
 
@@ -28,12 +30,12 @@ let titulo = document.querySelector('#idTitulo').value;
 // let alquiler = document.querySelector('#idAlquiler').value;
 let descripcion = document.querySelector('#idDescripcion').value;
 let precio = document.querySelector('#idPrecio').value;
-let autos = document.querySelector('#idAutos').value;
-let banios = document.querySelector('#idBanios').value;
-let dormitorios = document.querySelector('#idDormitorios').value;
+let puertas = document.querySelector('#idpuertas').value;
+let kilometros = document.querySelector('#idKm').value;
+let potencia = document.querySelector('#idPotencia').value;
 
 console.log(transaccion);
-let nuevoAnuncio = new Anuncio(null, titulo, transaccion, descripcion, precio, banios, autos, dormitorios);
+let nuevoAnuncio = new Anuncio(null, titulo, transaccion, descripcion, precio, puertas,kilometros,potencia);
 
 
 altaAnuncio(nuevoAnuncio);
@@ -113,10 +115,23 @@ function crearTabla(anuncio) {
             "<td>" + anuncio[index].transaccion + "</td>" +
             "<td>" + anuncio[index].descripcion + "</td>" +
             "<td>" + anuncio[index].precio + "</td>" +
-            "<td>" + anuncio[index].autos +  "</td>" +
-            "<td>" + anuncio[index].banios + "</td>" +
-            "<td>" + anuncio[index].dormitorios + "</td>" +
+            "<td>" + anuncio[index].puertas +  "</td>" +
+            "<td>" + anuncio[index].kilometros + "</td>" +
+            "<td>" + anuncio[index].potencia + "</td>" +
       
             "</tr>";
     }
 }
+function Eliminar()
+{
+    let id=  parseInt(document.querySelector('#').value);
+    let xhr= new XMLHttpRequest();
+    xhr.onreadystatechange=()=>{
+
+    }
+    xhr.open('POST','http://localhost:3000/baja')
+    xhr.setRequestHeader('content-Type','application/x-www-form-urlencoded')
+    xhr.send(`id${id}`);
+
+}
+

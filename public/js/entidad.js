@@ -5,24 +5,22 @@ export default class Anuncio
     transa;
     descripcion;
     precio;
-    banios;
-    autos;
-    dormitorios;
+    puertas;
+    kilometros;
+    potencia;
 
-    constructor (id,titulo,transaccion ,descripcion,precio,banios,autos,dormitorios)
+    constructor (id,titulo,transaccion ,descripcion,precio,puertas,kilometros,potencia)
     {
         this.id = id;
         this.titulo = titulo;
         this.transaccion = transaccion;
         this.descripcion = descripcion;
         this.precio = precio;
-        this.banios = banios;
-        this.autos = autos;
-        this.dormitorios = dormitorios;
+        this.puertas = puertas;
+        this.kilometros = kilometros;
+        this.potencia = potencia;
 
     }
 
-    getAnuncio() {
-        return this;
-    }
+  
 }
